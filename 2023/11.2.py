@@ -17,12 +17,6 @@ def parse_input():
     return galaxy
 
 
-def transpose_matrix(matrix):
-    transpose_matrix = list(map(list, zip(*matrix)))
-
-    return transpose_matrix
-
-
 def expand_galaxy_rows(pos, k):
     # Expand rows
     expanded_rows = [pos[0][0] * k]
@@ -76,7 +70,9 @@ def calculate_total_distance(pos):
 
 galaxy = parse_input()
 positions = get_all_positions(galaxy)
-positions = expand_galaxy_rows(positions, 1000000)
+positions = expand_galaxy_rows(positions, 2)
+for pr in positions:
+    print(pr)
 total_dist = calculate_total_distance(positions)
 
 print("Ans: ", total_dist)
