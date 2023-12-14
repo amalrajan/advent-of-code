@@ -67,24 +67,10 @@ def calculate_load(grid):
     return load
 
 
-def display_grid(grid):
-    print("\n".join(["".join(row) for row in grid]))
-    print()
-
-
 def get_next_grid(grid):
     for _ in range(4):
         tilt_north(grid)
         rotate_grid(grid)
-
-
-def are_matrices_equal(matrix1, matrix2):
-    for i in range(len(matrix1)):
-        for j in range(len(matrix1[0])):
-            if matrix1[i][j] != matrix2[i][j]:
-                return False
-
-    return True
 
 
 def serialize_grid(grid):
