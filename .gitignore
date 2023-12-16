@@ -1,2 +1,6 @@
 *.txt
 temp*.py
+temp*.cpp
+.vscode
+input.txt
+output.txt
