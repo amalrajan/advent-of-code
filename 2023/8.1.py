@@ -1,5 +1,4 @@
 import sys
-import math
 import collections
 
 try:
@@ -36,7 +35,7 @@ def travel(source, directions, graph):
 
     while stack:
         node = stack.pop()
-        if node[-1] == "Z":
+        if node == "ZZZ":
             break
         steps += 1
         stack.append(graph[node][directions[dirx]])
@@ -45,31 +44,7 @@ def travel(source, directions, graph):
     return steps
 
 
-def find_starting_nodes(graph):
-    starting_nodes = []
-    for node in graph:
-        if node[-1] == "A":
-            starting_nodes.append(node)
-
-    return starting_nodes
-
-
-def find_lcm(nums):
-    if not nums:
-        return []
-
-    lcm = nums[0]
-    for i in range(1, len(nums)):
-        lcm = (lcm * nums[i]) // math.gcd(lcm, nums[i])
-
-    return lcm
-
-
 directions, graph = parse_input()
+steps = travel("AAA", directions, graph)
 
-steps = []
-for node in find_starting_nodes(graph):
-    steps.append(travel(node, directions, graph))
-
-
-print("Ans:", find_lcm(steps))
+print("Ans:", steps)
