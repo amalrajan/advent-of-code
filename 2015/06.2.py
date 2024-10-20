@@ -1,10 +1,4 @@
-import bisect
-import heapq
-import math
-import os
 import sys
-from collections import *
-from typing import *
 
 try:
     sys.stdin = open(sys.path[0] + "/input.txt", "r")

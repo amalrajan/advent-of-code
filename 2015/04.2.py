@@ -1,8 +1,6 @@
-import sys
 import hashlib
-from collections import defaultdict
 import multiprocessing
-
+import sys
 
 try:
     sys.stdin = open(sys.path[0] + "/input.txt", "r")
