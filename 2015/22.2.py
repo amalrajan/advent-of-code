@@ -70,6 +70,9 @@ def solve():
     visited = set()
 
     def apply_effects(player, boss):
+        # Part 2
+        player["Hit Points"] -= 1
+
         # Apply active spell effects
         player["Armor"] = 0  # Reset armor to base value each turn
         for spell_name, spell in spells.items():

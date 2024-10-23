@@ -4,3 +4,4 @@ temp*.cpp
 .vscode
 input.txt
 output.txt
+advent-of-code.code-workspace
