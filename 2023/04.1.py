@@ -1,6 +1,5 @@
 import sys
 
-
 try:
     sys.stdin = open(sys.path[0] + "/input.txt", "r")
     sys.stdout = open(sys.path[0] + "/output.txt", "w")
